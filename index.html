@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>For My Love 💗</title>
+<title>For Umer 💗</title>
 
 <style>
 
@@ -38,6 +39,7 @@ body{
 }
 
 @keyframes fade{
+
     from{
         opacity:0;
         transform:translateY(20px);
@@ -47,6 +49,7 @@ body{
         opacity:1;
         transform:translateY(0);
     }
+
 }
 
 h1{
@@ -58,6 +61,10 @@ h1{
 
 h2{
     font-size:clamp(45px,10vw,80px);
+    color:#681c2c;
+}
+
+h3{
     color:#681c2c;
 }
 
@@ -98,6 +105,8 @@ button{
     font-size:15px;
     font-weight:bold;
     transition:.3s;
+    text-decoration:none;
+    display:inline-block;
 }
 
 .btn:hover{
@@ -110,6 +119,9 @@ button{
     font-size:20px;
     margin-bottom:30px;
 }
+
+
+/* GIFTS */
 
 .gift-grid{
     display:grid;
@@ -145,7 +157,7 @@ button{
 }
 
 
-/* SPECIAL REASONS CARDS */
+/* REASONS */
 
 .reasons-grid{
     max-width:900px;
@@ -167,7 +179,6 @@ button{
 
 .reason-card:hover{
     transform:translateY(-8px) rotate(1deg);
-    box-shadow:0 15px 30px #681c2c25;
 }
 
 .reason-icon{
@@ -176,16 +187,16 @@ button{
 }
 
 .reason-card h3{
-    color:#681c2c;
     font-size:23px;
     margin-bottom:10px;
 }
 
 .reason-card p{
     font-size:16px;
-    line-height:1.6;
 }
 
+
+/* FLOWERS */
 
 .bouquet{
     font-size:130px;
@@ -205,6 +216,9 @@ button{
 
 }
 
+
+/* HEART */
+
 .heart{
     font-size:150px;
     animation:heartbeat 1.4s infinite;
@@ -221,6 +235,26 @@ button{
     }
 
 }
+
+
+/* YOUTUBE SONG */
+
+.song-box{
+    display:none;
+    margin-top:20px;
+}
+
+.song-box iframe{
+    width:560px;
+    max-width:90vw;
+    height:315px;
+    max-height:55vw;
+    border-radius:18px;
+    box-shadow:0 10px 30px #681c2c25;
+}
+
+
+/* LETTER */
 
 .letter{
     max-width:750px;
@@ -241,7 +275,6 @@ button{
 .letter p{
     font-size:20px;
     margin-bottom:18px;
-    line-height:1.6;
 }
 
 .signature{
@@ -249,6 +282,9 @@ button{
     font-size:25px;
     margin-top:30px;
 }
+
+
+/* FLOATING HEARTS */
 
 .floating-heart{
     position:fixed;
@@ -271,6 +307,9 @@ button{
     }
 
 }
+
+
+/* MOBILE */
 
 @media(max-width:800px){
 
@@ -304,10 +343,6 @@ button{
         max-width:330px;
     }
 
-    .reason-card{
-        padding:22px 18px;
-    }
-
     .letter{
         padding:25px;
     }
@@ -319,17 +354,24 @@ button{
 }
 
 </style>
+
 </head>
 
 <body>
+
 
 <!-- HOME -->
 
 <section id="home" class="page active">
 
-    <div class="character">🧸</div>
+    <div class="character">
+        🧸
+    </div>
 
-    <h1>Hello<br>My Love 💗</h1>
+    <h1>
+        Hello Umer,<br>
+        My Love 💗
+    </h1>
 
     <p class="subtitle">
         Do you want to see your gift?
@@ -354,7 +396,9 @@ button{
 
 <section id="noThanks" class="page">
 
-    <div class="character">🥺</div>
+    <div class="character">
+        🥺
+    </div>
 
     <h1>
         I promise<br>
@@ -372,7 +416,9 @@ button{
 
 <section id="gifts" class="page">
 
-    <h2>THESE ARE FOR YOU! 💗</h2>
+    <h2>
+        THESE ARE FOR YOU! 💗
+    </h2>
 
     <p class="subtitle">
         Choose something special ✨
@@ -380,24 +426,56 @@ button{
 
     <div class="gift-grid">
 
+
         <button class="gift" onclick="showPage('special')">
-            <div class="icon">✨</div>
-            <span>Reasons You're Special</span>
+
+            <div class="icon">
+                ✨
+            </div>
+
+            <span>
+                Reasons You're Special
+            </span>
+
         </button>
+
 
         <button class="gift" onclick="showPage('flowers')">
-            <div class="icon">🌷</div>
-            <span>Virtual Flowers</span>
+
+            <div class="icon">
+                🌷
+            </div>
+
+            <span>
+                Virtual Flowers
+            </span>
+
         </button>
+
 
         <button class="gift" onclick="showPage('hearts')">
-            <div class="icon">🔒</div>
-            <span>Lock Hearts</span>
+
+            <div class="icon">
+                🔒
+            </div>
+
+            <span>
+                Lock Hearts
+            </span>
+
         </button>
 
+
         <button class="gift" onclick="showPage('letter')">
-            <div class="icon">💌</div>
-            <span>Love Letter</span>
+
+            <div class="icon">
+                💌
+            </div>
+
+            <span>
+                Love Letter
+            </span>
+
         </button>
 
     </div>
@@ -405,23 +483,31 @@ button{
 </section>
 
 
-<!-- REASONS YOU'RE SPECIAL -->
+<!-- REASONS YOU ARE SPECIAL -->
 
 <section id="special" class="page">
 
-    <h2>Reasons You're Special ✨</h2>
+    <h2>
+        Reasons You're Special ✨
+    </h2>
 
     <p class="subtitle">
         Just a few little things that make you truly special 💗
     </p>
 
+
     <div class="reasons-grid">
+
 
         <div class="reason-card">
 
-            <div class="reason-icon">💛</div>
+            <div class="reason-icon">
+                💛
+            </div>
 
-            <h3>Your Kindness</h3>
+            <h3>
+                Your Kindness
+            </h3>
 
             <p>
                 You have a beautiful way of making people feel cared for and special.
@@ -432,9 +518,13 @@ button{
 
         <div class="reason-card">
 
-            <div class="reason-icon">✨</div>
+            <div class="reason-icon">
+                ✨
+            </div>
 
-            <h3>Your Smile</h3>
+            <h3>
+                Your Smile
+            </h3>
 
             <p>
                 Your smile can make even an ordinary moment feel beautiful.
@@ -445,9 +535,13 @@ button{
 
         <div class="reason-card">
 
-            <div class="reason-icon">🌷</div>
+            <div class="reason-icon">
+                🌷
+            </div>
 
-            <h3>Your Heart</h3>
+            <h3>
+                Your Heart
+            </h3>
 
             <p>
                 Your beautiful heart is one of the things that makes you truly special.
@@ -458,9 +552,13 @@ button{
 
         <div class="reason-card">
 
-            <div class="reason-icon">🌙</div>
+            <div class="reason-icon">
+                🌙
+            </div>
 
-            <h3>Your Presence</h3>
+            <h3>
+                Your Presence
+            </h3>
 
             <p>
                 Sometimes, just having you around makes everything feel better.
@@ -471,9 +569,13 @@ button{
 
         <div class="reason-card">
 
-            <div class="reason-icon">💫</div>
+            <div class="reason-icon">
+                💫
+            </div>
 
-            <h3>Your Uniqueness</h3>
+            <h3>
+                Your Uniqueness
+            </h3>
 
             <p>
                 There is something about you that nobody else can replace.
@@ -484,9 +586,13 @@ button{
 
         <div class="reason-card">
 
-            <div class="reason-icon">🤍</div>
+            <div class="reason-icon">
+                🤍
+            </div>
 
-            <h3>Simply You</h3>
+            <h3>
+                Simply You
+            </h3>
 
             <p>
                 You don't have to be perfect. Being yourself is already special.
@@ -495,6 +601,7 @@ button{
         </div>
 
     </div>
+
 
     <button class="btn" onclick="showPage('gifts')">
         RETURN
@@ -511,7 +618,9 @@ button{
         💐
     </div>
 
-    <h2>For You 🌷</h2>
+    <h2>
+        For You 🌷
+    </h2>
 
     <p class="subtitle">
         A little bouquet for the person who means the world to me 💗
@@ -532,17 +641,37 @@ button{
         💗
     </div>
 
-    <h2>Our Love 🔒</h2>
+    <h2>
+        Our Love 🔒
+    </h2>
 
     <p class="subtitle">
-        My heart is locked for you forever.
+        My heart is locked for you forever 💗
     </p>
 
-    <button class="btn" onclick="playSong()">
+
+    <button class="btn" onclick="unlockHeart()">
         🔐 UNLOCK MY HEART
     </button>
 
-    <p id="songText"></p>
+
+    <div id="songBox" class="song-box">
+
+        <p class="subtitle">
+            🎶 This song is for you, my love 💗
+        </p>
+
+
+        <iframe
+            src="https://www.youtube.com/embed/izdeBydQFFA"
+            title="Meri Zindagi Hai Tu"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+        </iframe>
+
+    </div>
+
 
     <button class="btn" onclick="showPage('gifts')">
         RETURN
@@ -551,13 +680,15 @@ button{
 </section>
 
 
-<!-- LETTER -->
+<!-- LOVE LETTER -->
 
 <section id="letter" class="page">
 
     <div class="letter">
 
-        <h2>For My Love 💌</h2>
+        <h2>
+            For Umer 💌
+        </h2>
 
         <p>
             My love,
@@ -589,11 +720,14 @@ button{
         </p>
 
         <div class="signature">
+
             With all my love,<br>
             Forever yours 💌
+
         </div>
 
     </div>
+
 
     <button class="btn" onclick="showPage('gifts')">
         RETURN
@@ -603,6 +737,7 @@ button{
 
 
 <script>
+
 
 function showPage(pageId){
 
@@ -621,6 +756,13 @@ function showPage(pageId){
 }
 
 
+function unlockHeart(){
+
+    document.getElementById("songBox").style.display="block";
+
+}
+
+
 function createHearts(){
 
     for(let i=0;i<12;i++){
@@ -629,11 +771,15 @@ function createHearts(){
 
         heart.className="floating-heart";
 
-        heart.innerHTML=["💗","💕","💖","♡"][Math.floor(Math.random()*4)];
+        heart.innerHTML=
+        ["💗","💕","💖","♡"]
+        [Math.floor(Math.random()*4)];
 
-        heart.style.left=Math.random()*100+"vw";
+        heart.style.left=
+        Math.random()*100+"vw";
 
-        heart.style.animationDuration=(3+Math.random()*3)+"s";
+        heart.style.animationDuration=
+        (3+Math.random()*3)+"s";
 
         document.body.appendChild(heart);
 
@@ -644,14 +790,6 @@ function createHearts(){
         },6000);
 
     }
-
-}
-
-
-function playSong(){
-
-    document.getElementById("songText").innerHTML=
-    "🎶 This song is for you, my love 💗";
 
 }
 
