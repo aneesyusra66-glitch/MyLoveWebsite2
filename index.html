@@ -144,33 +144,48 @@ button{
     font-weight:bold;
 }
 
-.photo-grid{
-    max-width:800px;
+
+/* SPECIAL REASONS CARDS */
+
+.reasons-grid{
+    max-width:900px;
     width:100%;
     display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:18px;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
     margin:25px 0;
 }
 
-.photo{
-    aspect-ratio:1/1;
-    background:#f2dfe3;
-    border:6px solid white;
-    border-radius:20px;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    font-size:60px;
-    box-shadow:0 10px 25px #681c2c22;
-    overflow:hidden;
+.reason-card{
+    background:#fff;
+    padding:28px 20px;
+    border-radius:25px;
+    border:2px solid #ecd4d9;
+    box-shadow:0 10px 25px #681c2c18;
+    transition:.3s;
 }
 
-.photo img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
+.reason-card:hover{
+    transform:translateY(-8px) rotate(1deg);
+    box-shadow:0 15px 30px #681c2c25;
 }
+
+.reason-icon{
+    font-size:50px;
+    margin-bottom:12px;
+}
+
+.reason-card h3{
+    color:#681c2c;
+    font-size:23px;
+    margin-bottom:10px;
+}
+
+.reason-card p{
+    font-size:16px;
+    line-height:1.6;
+}
+
 
 .bouquet{
     font-size:130px;
@@ -257,6 +272,14 @@ button{
 
 }
 
+@media(max-width:800px){
+
+    .reasons-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
 @media(max-width:600px){
 
     .gift-grid{
@@ -274,6 +297,15 @@ button{
 
     .gift span{
         font-size:12px;
+    }
+
+    .reasons-grid{
+        grid-template-columns:1fr;
+        max-width:330px;
+    }
+
+    .reason-card{
+        padding:22px 18px;
     }
 
     .letter{
@@ -348,9 +380,9 @@ button{
 
     <div class="gift-grid">
 
-        <button class="gift" onclick="showPage('memories')">
-            <div class="icon">📸</div>
-            <span>Our Memories</span>
+        <button class="gift" onclick="showPage('special')">
+            <div class="icon">✨</div>
+            <span>Reasons You're Special</span>
         </button>
 
         <button class="gift" onclick="showPage('flowers')">
@@ -373,32 +405,93 @@ button{
 </section>
 
 
-<!-- MEMORIES -->
+<!-- REASONS YOU'RE SPECIAL -->
 
-<section id="memories" class="page">
+<section id="special" class="page">
 
-    <h2>Our Memories 📸</h2>
+    <h2>Reasons You're Special ✨</h2>
 
     <p class="subtitle">
-        Our little moments are my favorite memories 🤍
+        Just a few little things that make you truly special 💗
     </p>
 
-    <div class="photo-grid">
+    <div class="reasons-grid">
 
-        <div class="photo">
-            📸
+        <div class="reason-card">
+
+            <div class="reason-icon">💛</div>
+
+            <h3>Your Kindness</h3>
+
+            <p>
+                You have a beautiful way of making people feel cared for and special.
+            </p>
+
         </div>
 
-        <div class="photo">
-            📸
+
+        <div class="reason-card">
+
+            <div class="reason-icon">✨</div>
+
+            <h3>Your Smile</h3>
+
+            <p>
+                Your smile can make even an ordinary moment feel beautiful.
+            </p>
+
         </div>
 
-        <div class="photo">
-            📸
+
+        <div class="reason-card">
+
+            <div class="reason-icon">🌷</div>
+
+            <h3>Your Heart</h3>
+
+            <p>
+                Your beautiful heart is one of the things that makes you truly special.
+            </p>
+
         </div>
 
-        <div class="photo">
-            📸
+
+        <div class="reason-card">
+
+            <div class="reason-icon">🌙</div>
+
+            <h3>Your Presence</h3>
+
+            <p>
+                Sometimes, just having you around makes everything feel better.
+            </p>
+
+        </div>
+
+
+        <div class="reason-card">
+
+            <div class="reason-icon">💫</div>
+
+            <h3>Your Uniqueness</h3>
+
+            <p>
+                There is something about you that nobody else can replace.
+            </p>
+
+        </div>
+
+
+        <div class="reason-card">
+
+            <div class="reason-icon">🤍</div>
+
+            <h3>Simply You</h3>
+
+            <p>
+                You don't have to be perfect. Being yourself is already special.
+            </p>
+
         </div>
 
     </div>
