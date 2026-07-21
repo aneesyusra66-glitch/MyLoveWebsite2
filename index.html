@@ -39,7 +39,6 @@ body{
 }
 
 @keyframes fade{
-
     from{
         opacity:0;
         transform:translateY(20px);
@@ -49,7 +48,6 @@ body{
         opacity:1;
         transform:translateY(0);
     }
-
 }
 
 h1{
@@ -92,7 +90,6 @@ button{
     50%{
         transform:translateY(-12px);
     }
-
 }
 
 .btn{
@@ -213,7 +210,6 @@ button{
     50%{
         transform:translateY(-10px);
     }
-
 }
 
 
@@ -233,24 +229,22 @@ button{
     50%{
         transform:scale(1.15);
     }
-
 }
 
 
-/* YOUTUBE SONG */
+/* SPOTIFY */
 
 .song-box{
     display:none;
     margin-top:20px;
+    width:100%;
+    max-width:600px;
 }
 
 .song-box iframe{
-    width:560px;
-    max-width:90vw;
-    height:315px;
-    max-height:55vw;
-    border-radius:18px;
-    box-shadow:0 10px 30px #681c2c25;
+    width:100%;
+    height:152px;
+    border-radius:12px;
 }
 
 
@@ -305,7 +299,6 @@ button{
         transform:translateY(-100vh);
         opacity:0;
     }
-
 }
 
 
@@ -316,7 +309,6 @@ button{
     .reasons-grid{
         grid-template-columns:repeat(2,1fr);
     }
-
 }
 
 @media(max-width:600px){
@@ -426,7 +418,6 @@ button{
 
     <div class="gift-grid">
 
-
         <button class="gift" onclick="showPage('special')">
 
             <div class="icon">
@@ -494,7 +485,6 @@ button{
     <p class="subtitle">
         Just a few little things that make you truly special 💗
     </p>
-
 
     <div class="reasons-grid">
 
@@ -663,11 +653,11 @@ button{
 
 
         <iframe
-            src="https://www.youtube.com/embed/izdeBydQFFA"
-            title="Meri Zindagi Hai Tu"
+            src="https://open.spotify.com/embed/track/6zfKeRGBzsk6EnJnpoDd6I?utm_source=generator"
+            title="Fakira on Spotify"
             frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen>
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            loading="lazy">
         </iframe>
 
     </div>
@@ -737,7 +727,6 @@ button{
 
 
 <script>
-
 
 function showPage(pageId){
 
