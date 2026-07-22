@@ -23,6 +23,55 @@ body{
     overflow-x:hidden;
 }
 
+/* PASSWORD SCREEN */
+
+#passwordScreen{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    text-align:center;
+    padding:25px;
+    background:#fff8f8;
+}
+
+.lock-icon{
+    font-size:90px;
+    margin-bottom:20px;
+    animation:bounce 2s infinite;
+}
+
+#passwordScreen h1{
+    font-size:clamp(45px,10vw,80px);
+    line-height:.9;
+    color:#681c2c;
+    margin-bottom:25px;
+}
+
+#passwordScreen p{
+    font-size:18px;
+    margin-bottom:20px;
+}
+
+#passwordInput{
+    width:280px;
+    padding:15px 20px;
+    border:2px solid #681c2c;
+    border-radius:30px;
+    outline:none;
+    text-align:center;
+    font-family:inherit;
+    font-size:16px;
+    margin-bottom:10px;
+}
+
+#passwordError{
+    display:none;
+    color:#b32645;
+    font-size:15px !important;
+}
+
 .page{
     min-height:100vh;
     display:none;
@@ -352,9 +401,43 @@ button{
 <body>
 
 
+<!-- PASSWORD SCREEN -->
+
+<div id="passwordScreen">
+
+    <div class="lock-icon">
+        🔒
+    </div>
+
+    <h1>
+        Private Gift 💗
+    </h1>
+
+    <p>
+        Enter the password to open your surprise ✨
+    </p>
+
+    <input
+        type="password"
+        id="passwordInput"
+        placeholder="Enter password"
+        onkeydown="if(event.key==='Enter') checkPassword()"
+    >
+
+    <button class="btn" onclick="checkPassword()">
+        UNLOCK 💗
+    </button>
+
+    <p id="passwordError">
+        Wrong password. Try again 💗
+    </p>
+
+</div>
+
+
 <!-- HOME -->
 
-<section id="home" class="page active">
+<section id="home" class="page">
 
     <div class="character">
         🧸
@@ -727,6 +810,28 @@ button{
 
 
 <script>
+
+function checkPassword(){
+
+    const password =
+    document.getElementById("passwordInput").value;
+
+    const correctPassword = "OnlyForU!07";
+
+    if(password === correctPassword){
+
+        document.getElementById("passwordScreen").style.display="none";
+
+        document.getElementById("home").classList.add("active");
+
+    }else{
+
+        document.getElementById("passwordError").style.display="block";
+
+    }
+
+}
+
 
 function showPage(pageId){
 
